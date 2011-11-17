@@ -1,8 +1,10 @@
 <% content_for :body_content_left do %>
   <ul id="staff_members">
-    <% @staff_members.each do |staff_member| %>
-      <li>
-        <%= link_to staff_member.name, staff_member_path(staff_member) %>
+    <% @staff_members.each do |member| %>
+      <li class="staff_member">
+        <%= image_fu member.photo, nil %>
+        <div class="name"><%=raw member.name %></div>
+        <div class="email"><%=link_to member.email, member.email %></div>
       </li>
     <% end %>
   </ul>
