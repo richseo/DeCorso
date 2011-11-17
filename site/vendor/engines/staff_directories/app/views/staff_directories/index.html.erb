@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="staff_directories">
+    <% @staff_directories.each do |staff_directory| %>
+      <li>
+        <%= link_to staff_directory.name, staff_directory_path(staff_directory) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

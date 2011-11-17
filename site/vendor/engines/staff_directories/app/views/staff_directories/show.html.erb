@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @staff_directory.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @staff_directory.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Email</h1>
+    <p>
+      <%=raw @staff_directory.email %>
+    </p>
+  </section>
+  <section>
+    <h1>Photo</h1>
+    <p>
+      <%= image_fu @staff_directory.photo, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="staff_directories">
+      <% @staff_directories.each do |staff_directory| %>
+        <li>
+          <%= link_to staff_directory.name, staff_directory_path(staff_directory) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    staff_directories:
+      title: Staff Directories
+  admin:
+    staff_directories:
+      actions:
+        create_new: Maak een nieuwe Staff Directory
+        reorder: Wijzig de volgorde van de Staff Directories
+        reorder_done: Klaar met het wijzingen van de volgorde van de Staff Directories
+      records:
+        title: Staff Directories
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Staff Directories. Druk op 'Maak een nieuwe Staff Directory' om de eerste aan te maken.
+      staff_directory:
+        view_live_html: Bekijk deze staff directory op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze staff directory
+        delete: Verwijder deze staff directory voor eeuwig
+  staff_directories:
+    show:
+      other: Andere Staff Directories

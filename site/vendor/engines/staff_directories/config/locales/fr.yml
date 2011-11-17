@@ -1,0 +1,25 @@
+fr:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    staff_directories:
+      title: Staff Directories
+  admin:
+    staff_directories:
+      actions:
+        create_new: Créer un(e) nouve(au/l/lle) Staff Directory
+        reorder: Réordonner les Staff Directories
+        reorder_done: Fin de réordonnancement des Staff Directories
+      records:
+        title: Staff Directories
+        sorry_no_results: "Désolé ! Aucun résultat."
+        no_items_yet: 'Il n''y a actuellement aucun(e) Staff Directory. Cliquer sur "Créer un(e) nouve(au/l/lle) Staff Directory" pour créer votre premi(er/ère) staff directory.'
+      staff_directory:
+        view_live_html: Voir ce(t/tte) staff directory <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier ce(t/tte) staff directory
+        delete: Supprimer définitivement ce(t/tte) staff directory
+  staff_directories:
+    show:
+      other: Autres Staff Directories

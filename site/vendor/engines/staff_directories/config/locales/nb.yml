@@ -1,0 +1,21 @@
+nb:
+  plugins:
+    staff_directories:
+      title: Staff Directories
+  admin:
+    staff_directories:
+      actions:
+        create_new: Lag en ny Staff Directory
+        reorder: Endre rekkefølgen på Staff Directories
+        reorder_done: Ferdig å endre rekkefølgen Staff Directories
+      records:
+        title: Staff Directories
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Staff Directories enda. Klikk på "Lag en ny Staff Directory" for å legge til din første staff directory.
+      staff_directory:
+        view_live_html: Vis hvordan denne staff directory ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne staff directory
+        delete: Fjern denne staff directory permanent
+  staff_directories:
+    show:
+      other: Andre Staff Directories

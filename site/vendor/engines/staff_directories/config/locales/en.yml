@@ -1,0 +1,25 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    staff_directories:
+      title: Staff Directories
+  admin:
+    staff_directories:
+      actions:
+        create_new: Add New Staff Directory
+        reorder: Reorder Staff Directories
+        reorder_done: Done Reordering Staff Directories
+      records:
+        title: Staff Directories
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Staff Directories yet. Click "Add New Staff Directory" to add your first staff directory.
+      staff_directory:
+        view_live_html: View this staff directory live <br/><em>(opens in a new window)</em>
+        edit: Edit this staff directory
+        delete: Remove this staff directory forever
+  staff_directories:
+    show:
+      other: Other Staff Directories
