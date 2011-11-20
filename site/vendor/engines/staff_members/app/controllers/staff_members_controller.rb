@@ -20,7 +20,7 @@ class StaffMembersController < ApplicationController
 protected
 
   def find_all_staff_members
-    @staff_members = StaffMember.order('position ASC')
+    @staff_members = StaffMember.order('last_name ASC')
   end
 
   def find_page
