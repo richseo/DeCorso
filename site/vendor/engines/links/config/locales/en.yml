@@ -1,0 +1,25 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    links:
+      title: Links
+  admin:
+    links:
+      actions:
+        create_new: Add New Link
+        reorder: Reorder Links
+        reorder_done: Done Reordering Links
+      records:
+        title: Links
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Links yet. Click "Add New Link" to add your first link.
+      link:
+        view_live_html: View this link live <br/><em>(opens in a new window)</em>
+        edit: Edit this link
+        delete: Remove this link forever
+  links:
+    show:
+      other: Other Links

@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    links:
+      title: Links
+  admin:
+    links:
+      actions:
+        create_new: Maak een nieuwe Link
+        reorder: Wijzig de volgorde van de Links
+        reorder_done: Klaar met het wijzingen van de volgorde van de Links
+      records:
+        title: Links
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Links. Druk op 'Maak een nieuwe Link' om de eerste aan te maken.
+      link:
+        view_live_html: Bekijk deze link op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze link
+        delete: Verwijder deze link voor eeuwig
+  links:
+    show:
+      other: Andere Links

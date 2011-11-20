@@ -1,0 +1,21 @@
+nb:
+  plugins:
+    links:
+      title: Links
+  admin:
+    links:
+      actions:
+        create_new: Lag en ny Link
+        reorder: Endre rekkefølgen på Links
+        reorder_done: Ferdig å endre rekkefølgen Links
+      records:
+        title: Links
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Links enda. Klikk på "Lag en ny Link" for å legge til din første link.
+      link:
+        view_live_html: Vis hvordan denne link ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne link
+        delete: Fjern denne link permanent
+  links:
+    show:
+      other: Andre Links

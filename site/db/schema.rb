@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111120082832) do
+ActiveRecord::Schema.define(:version => 20111120091156) do
 
   create_table "event_categories", :force => true do |t|
     t.string   "name"
@@ -60,6 +60,16 @@ ActiveRecord::Schema.define(:version => 20111120082832) do
     t.string   "image_uid"
     t.string   "image_ext"
   end
+
+  create_table "links", :force => true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "links", ["id"], :name => "index_links_on_id"
 
   create_table "page_part_translations", :force => true do |t|
     t.integer  "page_part_id"

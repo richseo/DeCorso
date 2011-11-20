@@ -1,0 +1,25 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    links:
+      title: Links
+  admin:
+    links:
+      actions:
+        create_new: CREATE NEW Link
+        reorder: REORDR Links
+        reorder_done: DUN REORDERIN Links
+      records:
+        title: Links
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Links YET. CLICK "CREATE NEW Link" 2 ADD UR FURST link.
+      link:
+        view_live_html: VIEW DIS link LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS link
+        delete: REMOOV DIS link FOREVR
+  links:
+    show:
+      other: OTHR Links

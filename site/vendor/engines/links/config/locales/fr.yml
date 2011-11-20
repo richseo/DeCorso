@@ -1,0 +1,25 @@
+fr:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    links:
+      title: Links
+  admin:
+    links:
+      actions:
+        create_new: Créer un(e) nouve(au/l/lle) Link
+        reorder: Réordonner les Links
+        reorder_done: Fin de réordonnancement des Links
+      records:
+        title: Links
+        sorry_no_results: "Désolé ! Aucun résultat."
+        no_items_yet: 'Il n''y a actuellement aucun(e) Link. Cliquer sur "Créer un(e) nouve(au/l/lle) Link" pour créer votre premi(er/ère) link.'
+      link:
+        view_live_html: Voir ce(t/tte) link <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier ce(t/tte) link
+        delete: Supprimer définitivement ce(t/tte) link
+  links:
+    show:
+      other: Autres Links
