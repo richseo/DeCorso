@@ -2,7 +2,7 @@
   <ul id="links">
     <% @links.each do |link| %>
       <li>
-        <%= link_to link.title, link.url %>
+      <%= link_to link.title, link.url, :target => "__#{link.title.gsub(/\s+/, '_').downcase}" %>
       </li>
     <% end %>
   </ul>
