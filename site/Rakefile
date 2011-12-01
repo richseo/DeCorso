@@ -5,3 +5,20 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 Site::Application.load_tasks
+
+namespace :deploy do
+  USER = 'ubuntu'.freeze
+  HOST = 'ec2-184-73-119-48.compute-1.amazonaws.com'.freeze
+  PATH = '/var/webapps/Makakilo-Elementary/site'.freeze
+
+  task :live do
+    cmds = "
+      cd #{PATH} &&
+      git pull &&
+      bundle install --deployment &&
+      touch #{PATH}/tmp/restart.txt
+    "
+
+    sh "ssh -i ~/.ec2/makakilo-elementary.pem #{USER}@#{HOST} '#{cmds}'"
+  end
+end
