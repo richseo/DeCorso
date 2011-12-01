@@ -19,6 +19,6 @@ namespace :deploy do
       touch #{PATH}/tmp/restart.txt
     "
 
-    sh "ssh -i ~/.ec2/makakilo-elementary.pem #{USER}@#{HOST} '#{cmds}'"
+    sh "git push && ssh -i ~/.ec2/makakilo-elementary.pem #{USER}@#{HOST} '#{cmds}'"
   end
 end
