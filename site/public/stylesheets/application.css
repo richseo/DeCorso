@@ -2,16 +2,18 @@ body {
   padding: 0px;
   margin: 0px;
   background: url(../images/bg.png) top left repeat;
+  font-family: 'Poly', serif;
 }
 
 #container {
   margin: 0px auto 0px auto;
   width: 900px;
   background: url(../images/container-bg.png) top center;
+  padding: 0px 0px 15px 0px;
 }
 
 #page, #footer {
-  width: 830px;
+  width: 827px;
 }
 
 #page {
