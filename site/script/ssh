@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ssh -i ~/.ec2/makakilo-elementary.pem ubuntu@ec2-184-73-119-48.compute-1.amazonaws.com

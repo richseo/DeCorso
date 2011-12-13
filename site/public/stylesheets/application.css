@@ -1,4 +1,38 @@
-/*
-  Override default refinery application CSS below.
-  Formatting applies to all frontend.
-*/
+body {
+  padding: 0px;
+  margin: 0px;
+  background: url(../images/bg.png) top left repeat;
+}
+
+#container {
+  margin: 0px auto 0px auto;
+  width: 900px;
+  background: url(../images/container-bg.png) top center;
+}
+
+#page, #footer {
+  width: 830px;
+}
+
+#page {
+  margin: 0px 40px 15px 40px;
+}
+
+#header {
+  display: block;
+  background: url(../images/header.png) top center;
+  height: 436px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 22pt;
+}
+
+#puas {
+  background: url(../images/header.png) top center no-repeat;
+  margin: 0px auto 0px auto;
+  height: 436px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
