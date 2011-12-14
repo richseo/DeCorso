@@ -1,17 +1,32 @@
 module ApplicationHelper
-  def truncate(text, length=20, sep='...')
-    if text.length > length
-      "#{text[0, length]}#{sep}"
-    else
-      text
-    end
+#  def truncate(text, length=20, sep='...')
+#    if text.length > length
+#      "#{text[0, length]}#{sep}"
+#    else
+#      text
+#    end
+#  end
+
+  def latest_news(title="Latest News")
+    html = NewsItem.latest.map do |item|
+      "<div class=\"title\">#{link_to item.title, item}</div>
+        <div class=\"publish-date\">Published #{item.publish_date.strftime("%B %d, %Y")}</div>
+        <div class=\"body\">#{truncate(item.body, :length => 300, :omission => "#{link_to('... (continued)', item)}")}</div>"
+    end.join('<br />')
+
+    raw "<div id=\"news-feed\"><div class=\"news-feed-title\">#{title}</div>#{html}</div>"
   end
 
-  def latest_news
-    raw(NewsItem.latest.map do |item|
-      "<div class=\"title\">#{item.title}</div>
-        <div class=\"publish-date\">#{item.publish_date.strftime("%B %d, %Y")}</div>
-        <div class=\"body\">#{truncate(item.body, 300)}</div>"
-    end.join('<br />'))
+  def menu
+    html = <<-HTML
+      <ul>
+      #{Refinery.menus.first.last.map do |m|
+          (m["url"] == request.path ? '<li class="selected">' : '<li>') +
+          "#{link_to m["title"], m["url"]}</li>"
+        end.join('')}
+      </ul>
+    HTML
+
+    raw html
   end
 end
