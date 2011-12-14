@@ -15,10 +15,11 @@ a, h1, h2 { color: #005dad }
   padding: 0px 0px 15px 0px;
 }
 
-#page, #footer, #menu { width: 827px }
+#page, #menu { width: 827px }
 
 #page {
   margin: 0px 40px 15px 40px;
+  min-height: 650px;
 }
 
 #header {
@@ -43,8 +44,37 @@ a, h1, h2 { color: #005dad }
 /* Menu */
 
 #menu {
-  padding-left: 40px;
-  margin-top: 10px;
+  z-index: 999;
+  position: absolute;
+  top: 307px;
+  width: 851px;
+  margin-left: 24px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 100px;
+  margin-top: 0px;
+
+  font-weight: bold;
+  font-size: 10pt;
+  font-family: sans-serif;
+}
+
+#menu, #menu li a {
+  background: transparent url(../images/blue-vertical-btn-bg.png) bottom repeat-x;
+  padding-bottom: 10px;
+}
+
+#menu li a {
+  text-decoration: none;
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-left: 60px;
+  color: white;
+}
+
+#menu li a:hover, #menu li.selected a {
+  background: transparent url(../images/yellow-vertical-btn-bg.png) bottom repeat-x;
+  color: #005dad;
 }
 
 #menu li, #menu ul {
@@ -55,34 +85,28 @@ a, h1, h2 { color: #005dad }
 #menu li {
   list-style: none;
   display: inline-block;
-  font-weight: bold;
-  font-size: 14pt;
 }
 
-#menu li a {
-  text-decoration: none;
-  padding: 5px;
-}
-
-#menu li a:hover, #menu li.selected a {
-  background-color: #005dad;
-  color: white;
-}
 
 /* Home Page New Feed */
 
 #news-feed {
-  width: 450px;
+  width: 550px;
   float: right;
   margin-top: 10px;
 }
 
-#news-feed .news-feed-title {
+.section {
+  margin-top: 10px;
+}
+
+#news-feed .news-feed-title, .section-header {
   text-transform: uppercase;
   font-size: 10pt;
   color: #555;
   font-weight: bold;
-  background: url(../images/news-header-bg.png) repeat-y;
+  font-family: sans-serif;
+  background: url(../images/news-header-bg.png) repeat-y left;
 }
 
 #news-feed .title {
@@ -104,11 +128,14 @@ a, h1, h2 { color: #005dad }
 /* Footer */
 
 #footer {
-  margin-top: 20px;
+  margin-top: 10px;
+  width: 900px;
+  background: url(../images/container-bg.png) top center;
   float: right;
 }
 
 #footer #mission {
+  padding-left: 50px;
   width: 500px;
   float: left;
 }
@@ -128,6 +155,16 @@ a, h1, h2 { color: #005dad }
 
 #footer #bottom-contact {
   width: 300px;
+  float: right;
+}
+
+#highlights {
+  float: left;
+  width: 200px;
+}
+
+#vision {
+  width: 550px;
   float: right;
 }
 

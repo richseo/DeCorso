@@ -20,7 +20,6 @@ module ApplicationHelper
   def menu
     html = <<-HTML
       <ul>
-      #{Refinery.menus.inspect}
       #{Refinery.menus.first.last.map do |m|
           (m["url"] == request.path ? '<li class="selected">' : '<li>') +
           "#{link_to m["title"], m["url"]}</li>"
