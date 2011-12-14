@@ -100,3 +100,34 @@ a, h1, h2 { color: #005dad }
 #news-feed .body p {
   margin: 5px 0 0 0;
 }
+
+/* Footer */
+
+#footer {
+  margin-top: 20px;
+  float: right;
+}
+
+#footer #mission {
+  width: 500px;
+  float: left;
+}
+
+#footer #mission #small-logo {
+  background: url(../images/small-logo.png) no-repeat;
+  width: 134px;
+  height: 117px;
+  float: left;
+}
+
+#footer #mission p {
+  width: 350px;
+  float: right;
+  font-size: 12pt;
+}
+
+#footer #bottom-contact {
+  width: 300px;
+  float: right;
+}
+

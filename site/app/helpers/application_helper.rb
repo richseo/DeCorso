@@ -20,6 +20,7 @@ module ApplicationHelper
   def menu
     html = <<-HTML
       <ul>
+      #{Refinery.menus.inspect}
       #{Refinery.menus.first.last.map do |m|
           (m["url"] == request.path ? '<li class="selected">' : '<li>') +
           "#{link_to m["title"], m["url"]}</li>"
@@ -28,5 +29,10 @@ module ApplicationHelper
     HTML
 
     raw html
+  end
+
+  def page_content(path, part=:body)
+    p = Page.where(:link_url => path).first
+    p && raw(p.content_for(part)) || ""
   end
 end

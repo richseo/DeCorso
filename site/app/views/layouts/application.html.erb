@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title><%= @page.title %></title>
   <%= stylesheet_link_tag 'application' %>
   <link href='http://fonts.googleapis.com/css?family=Poly' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag :defaults %>
@@ -18,7 +18,24 @@
 		<%= yield %>
 	</div>
 	<div id="footer">
-		<%= @page.content_for(:footer) %>
+        <div id="mission">
+          <div id="small-logo"></div>
+          <p>Our mission is to provide a positive, safe, nurturing, and enriching environment which will enable and encourage
+          our students to develop to their fullest potential.
+          <%= link_to "See our about page for more.", '/mission' %></p>
+        </div>
+
+        <div id="bottom-contact">
+          <strong>Contact Information</strong>
+          <div class="address">
+            92-657 Anipeahi Street<br />
+            Kapolei, Hawai'i 96707
+          </div>
+          <div class="phones">
+            Phone: (808) 672-1122<br />
+            Fax: (808) 672-1128
+          </div>
+        </div>
 	</div>
 </div>
 </div>
