@@ -29,7 +29,8 @@ a, h1, h2 { color: #005dad }
   width: 100%;
   margin: 0px;
   padding: 0px;
-  font-size: 22pt;
+  font-size: 24pt;
+  text-shadow: 0 0 0.1em gray;
 }
 
 #header #greeting {
