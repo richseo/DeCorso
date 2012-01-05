@@ -260,3 +260,9 @@ a, h1, h2, strong { color: #005dad }
   list-style: none;
   display: block;
 }
+
+#staff_members li .name {
+  color: #005dad;
+  font-weight: bold;
+  font-size: 1.1em;
+}
