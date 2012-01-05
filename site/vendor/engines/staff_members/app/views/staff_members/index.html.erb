@@ -2,9 +2,9 @@
   <ul id="staff_members">
     <% @staff_members.each do |member| %>
       <li class="staff_member">
-        <%= image_fu member.photo, nil %>
+        <%= image_fu member.photo, '200x200' %>
         <div class="name"><%=raw member.name %></div>
-        <div class="email"><%=link_to member.email, member.email %></div>
+        <div class="email">Email: <%=link_to member.email, member.email %></div>
       </li>
     <% end %>
   </ul>
