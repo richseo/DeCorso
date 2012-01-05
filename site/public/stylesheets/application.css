@@ -32,6 +32,30 @@ a, h1, h2 { color: #005dad }
   font-size: 22pt;
 }
 
+#header #greeting {
+  position: relative;
+  top: 50px;
+  left: 300px;
+  color: #005dad;
+}
+
+#header #greeting #aloha {
+  font-size: .7em;
+}
+
+#header #greeting #school {
+  font-weight: bold;
+}
+
+#header #greeting #contact-info {
+  font-size: .6em;
+}
+
+#header #greeting #contact-info .address, #header #greeting #contact-info .phones {
+  float: left;
+  width: 200px;
+}
+
 #puas {
   background: url(../images/header.png) top center no-repeat;
   margin: 0px auto 0px auto;
@@ -53,10 +77,12 @@ a, h1, h2 { color: #005dad }
   padding-left: 0;
   /*padding-top: 100px;*/
   margin-top: 0px;
+  margin-bottom: 10px;
 
   font-weight: bold;
   font-size: 14pt;
   /*font-family: sans-serif;*/
+  border-bottom: solid 1pt #005dad;
 }
 
 #menu, #menu li a {
@@ -130,6 +156,9 @@ a, h1, h2 { color: #005dad }
 
 #footer {
   margin-top: 10px;
+  border-top: solid 1pt #005dad;
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 900px;
   background: url(../images/container-bg.png) top center;
   float: right;
