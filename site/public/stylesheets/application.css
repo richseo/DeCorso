@@ -30,7 +30,7 @@ a, h1, h2, strong { color: #005dad }
   margin: 0px;
   padding: 0px;
   font-size: 24pt;
-  text-shadow: 0 0 0.1em gray;
+  text-shadow: 0 0 0.08em gray;
 }
 
 #header #greeting {
