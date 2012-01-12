@@ -19,7 +19,8 @@ module ApplicationHelper
 
   def menu
     html = <<-HTML
-      #{Refinery.menus.select { || }}
+      #{Refinery.menus.count}
+      #{Refinery.menus}
       <ul>
       #{Refinery.menus.first.last.map do |m|
           (m["url"] == request.path ? '<li class="selected">' : '<li>') +
