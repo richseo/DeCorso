@@ -25,7 +25,7 @@ public/javascripts/cache
 public/stylesheets/cache
 
 # Vendor Cache
-#vendor/cache
+vendor/cache
 
 # Acts as Indexed
 index/**/*
