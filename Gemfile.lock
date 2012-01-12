@@ -144,6 +144,7 @@ GEM
     refinerycms-settings (1.0.9)
       activerecord (~> 3.0.10)
       refinerycms-base (= 1.0.9)
+    rmagick (2.13.1)
     routing-filter (0.2.4)
       actionpack
     seo_meta (1.1.1)
@@ -169,5 +170,6 @@ DEPENDENCIES
   refinerycms-links (= 1.0)!
   refinerycms-news (~> 1.2)
   refinerycms-staff_members (= 1.0)!
+  rmagick
   sqlite3
   will_paginate

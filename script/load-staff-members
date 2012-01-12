@@ -1,4 +1,4 @@
-# vim: set ft=ruby
+# vim: ft=ruby
 
 APP_ROOT    = File.expand_path(File.join(File.dirname(__FILE__), '..'))
 IMAGE_PATH  = "#{APP_ROOT}/public/images/staff".freeze

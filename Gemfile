@@ -8,6 +8,7 @@ source 'http://rubygems.org'
 gem 'sqlite3'
 gem 'mysql'
 gem 'will_paginate'
+gem 'rmagick'
 
 # Use unicorn as the web server
 # gem 'unicorn'
