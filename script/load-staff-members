@@ -1,0 +1,31 @@
+# vim: set ft=ruby
+
+APP_ROOT    = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+IMAGE_PATH  = "#{APP_ROOT}/public/images/staff".freeze
+STAFF_NAMES = "#{APP_ROOT}/media/staff.txt".freeze
+
+DEFAULT_IMG =
+  if i = Image.where(:image_name => "blank_photo.png").first then i
+  else
+    Image.create!(:image => File.new("#{IMAGE_PATH}/blank-photo.png"))
+  end
+
+names = IO.read(STAFF_NAMES).split(/\n/)
+
+names.each do |n|
+  name  = n.split('/').first
+  email = "#{n.gsub(/\s/, '_')}@notes.k12.hi.us".downcase
+  image = "#{IMAGE_PATH}/#{name}"
+ 
+  image =
+    if File.exists?(path = "#{image}.jpg") || File.exists?(path = "#{image}.JPG")
+      Image.create!(:image => File.new(path))   
+    else
+      DEFAULT_IMG
+    end
+
+  f, l = name.split(/\s+/)
+  if StaffMember.where(:first_name => f, :last_name => l).empty?
+    p StaffMember.create!(:first_name => f, :last_name => l, :email => email, :photo_id => image.id)
+  end
+end

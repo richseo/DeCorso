@@ -5,11 +5,13 @@ Site::Application.load_tasks
 
 namespace :deploy do
   USER    = 'root'.freeze
-  HOST    = '173.255.221.78'.freeze
+  HOST    = 'li231-78.members.linode.com'.freeze
   PATH    = '/var/webapps/Makakilo-Elementary'.freeze
   GIT_URL = 'git@github.com:delonnewman/Makakilo-Elementary.git'.freeze
   DB_CONF = 'config/database.yml'.freeze
   SSH_KEY = "#{ENV['HOME']}/.ssh/id_rsa.pub".freeze
+  PKGS    = 'libmysqlclient-dev libsqlite3-dev'.freeze # Debian / Ubuntu Packages
+  HTTPD_CONF = 'config/apache.conf'.freeze
 
   desc "launch SSH on #{HOST}"
   task :shell do
@@ -17,16 +19,34 @@ namespace :deploy do
   end
 
   desc "setup for deployment on #{HOST}"
-  task :setup do
+  task :setup => :virtual_host do
     cmds = %{
       git clone #{GIT_URL} #{PATH} --depth 1
       cd #{PATH} &&
+      apt-get install #{PKGS} &&
       bundle install --deployment
+      /etc/init.d/apache2 restart
     }
 
     sh "ssh -t #{USER}@#{HOST} '#{cmds}'"
     sh "scp #{USER}@#{HOST}:#{PATH}/config/database.yml #{DB_CONF}" 
     sh "ssh -t #{USER}@#{HOST} 'cd #{PATH} && rake db:setup RAILS_ENV=production'"
+  end
+
+  task :virtual_host do
+    file      = HTTPD_CONF.split('/').last
+    enabled   = "/etc/apache2/sites-enabled/#{HOST}"
+    available = "/etc/apache2/sites-available/#{HOST}"
+
+    cmds = %{
+      cd ~ &&
+      cp #{file} #{available}
+      rm #{enabled}
+      ln -s #{available} #{enabled}
+    }
+
+    sh "scp #{HTTPD_CONF} #{USER}@#{HOST}:~"
+    sh "ssh -t #{USER}@#{HOST} '#{cmds}'"
   end
 
   desc "remove deployment on #{HOST}"

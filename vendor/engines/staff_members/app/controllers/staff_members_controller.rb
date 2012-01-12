@@ -20,7 +20,9 @@ class StaffMembersController < ApplicationController
 protected
 
   def find_all_staff_members
-    @staff_members = StaffMember.order('last_name ASC')
+    page = params[:page] || 1
+
+    @staff_members = StaffMember.paginate(:page => page, :per_page => 5).order('last_name ASC')
   end
 
   def find_page

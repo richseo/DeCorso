@@ -170,3 +170,4 @@ DEPENDENCIES
   refinerycms-news (~> 1.2)
   refinerycms-staff_members (= 1.0)!
   sqlite3
+  will_paginate

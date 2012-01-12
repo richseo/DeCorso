@@ -206,18 +206,18 @@ a, h1, h2, strong { color: #005dad }
   margin-top: 5px;
 }
 
-.pagination {
+#slides ul.pagination {
 	margin: 10px auto 0;
 	width:100px;
 }
 
-.pagination li {
+#slides ul.pagination li {
 	float:left;
 	margin:0 1px;
 	list-style:none;
 }
 
-.pagination li a {
+#slides ul.pagination li a {
 	display:block;
 	width:12px;
 	height:0;
@@ -228,11 +228,11 @@ a, h1, h2, strong { color: #005dad }
 	overflow:hidden;
 }
 
-.pagination li.current a {
+#slides ul.pagination li.current a {
 	background-position:0 -12px;
 }
 
-.caption {
+#slides .caption {
 	z-index: 500;
 	position: absolute;
     top: 0;
@@ -266,3 +266,11 @@ a, h1, h2, strong { color: #005dad }
   font-weight: bold;
   font-size: 1.1em;
 }
+
+/* Staff Directory Pagination */
+
+div.pagination { margin: 7px }
+div.pagination a, div.pagination span, div.pagination em { padding: 3px 5px }
+div.pagination em.current { color: white; background: #005dad }
+div.pagination a { text-decoration: none }
+div.pagination a:hover { background: #005dad; color: white }
