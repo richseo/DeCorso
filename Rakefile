@@ -10,7 +10,7 @@ namespace :deploy do
   GIT_URL = 'git@github.com:delonnewman/Makakilo-Elementary.git'.freeze
   DB_CONF = 'config/database.yml'.freeze
   SSH_KEY = "#{ENV['HOME']}/.ssh/id_rsa.pub".freeze
-  PKGS    = 'libmysqlclient-dev libsqlite3-dev'.freeze # Debian / Ubuntu Packages
+  PKGS    = 'libmysqlclient-dev libsqlite3-dev libmagickcore-dev'.freeze # Debian / Ubuntu Packages
   HTTPD_CONF = 'config/apache.conf'.freeze
 
   desc "launch SSH on #{HOST}"
