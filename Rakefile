@@ -4,7 +4,7 @@ require 'rake'
 Site::Application.load_tasks
 
 namespace :deploy do
-  USER    = 'root'.freeze
+  USER    = 'makakilo'.freeze
   HOST    = 'li231-78.members.linode.com'.freeze
   PATH    = '/var/webapps/Makakilo-Elementary'.freeze
   GIT_URL = 'git@github.com:delonnewman/Makakilo-Elementary.git'.freeze
@@ -23,14 +23,14 @@ namespace :deploy do
     cmds = %{
       git clone #{GIT_URL} #{PATH} --depth 1
       cd #{PATH} &&
-      apt-get install #{PKGS} &&
+      sudo apt-get install #{PKGS} &&
       bundle install --deployment
-      /etc/init.d/apache2 restart
+      sudo /etc/init.d/apache2 restart
     }
 
     sh "ssh -t #{USER}@#{HOST} '#{cmds}'"
     sh "scp #{USER}@#{HOST}:#{PATH}/config/database.yml #{DB_CONF}" 
-    sh "ssh -t #{USER}@#{HOST} 'cd #{PATH} && rake db:setup RAILS_ENV=production'"
+    sh "ssh -t #{USER}@#{HOST} 'cd #{PATH} && rake db:setup RAILS_ENV=production && rails runner -e production script/load-staff-members'"
   end
 
   task :virtual_host do
@@ -40,9 +40,9 @@ namespace :deploy do
 
     cmds = %{
       cd ~ &&
-      cp #{file} #{available}
-      rm #{enabled}
-      ln -s #{available} #{enabled}
+      sudo cp #{file} #{available}
+      sudo rm #{enabled}
+      sudo ln -s #{available} #{enabled}
     }
 
     sh "scp #{HTTPD_CONF} #{USER}@#{HOST}:~"

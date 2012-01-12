@@ -19,6 +19,7 @@ module ApplicationHelper
 
   def menu
     html = <<-HTML
+      #{Refinery.menus.select { || }}
       <ul>
       #{Refinery.menus.first.last.map do |m|
           (m["url"] == request.path ? '<li class="selected">' : '<li>') +
