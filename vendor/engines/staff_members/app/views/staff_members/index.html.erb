@@ -1,20 +1,23 @@
 <% content_for :body_content_left do %>
-  Page <%= params[:page] || 1 %>
-  (<%= @staff_members[0].last_name %> to <%= @staff_members.last.last_name %>)
-  <%= will_paginate @staff_members %>
-
-  <ul id="staff_members">
-
-    <% @staff_members.each do |member| %>
-      <li class="staff_member">
-        <%= image_fu member.photo, '200x200' %>
-        <div class="name"><%=raw member.name %></div>
-        <div class="email">Email: <%=link_to member.email, member.email %></div>
-      </li>
-    <% end %>
-  </ul>
+  <% if @staff_members.empty? %>
+  <% else %>
+    Page <%= params[:page] || 1 %>
+    (<%= @staff_members[0].last_name %> to <%= @staff_members.last.last_name %>)
+    <%= will_paginate @staff_members %>
   
-  <%= will_paginate @staff_members %>
+    <ul id="staff_members">
+  
+      <% @staff_members.each do |member| %>
+        <li class="staff_member">
+          <%= image_fu member.photo, '200x200' %>
+          <div class="name"><%=raw member.name %></div>
+          <div class="email">Email: <%=link_to member.email, member.email %></div>
+        </li>
+      <% end %>
+    </ul>
+    
+    <%= will_paginate @staff_members %>
+  <% end %>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
