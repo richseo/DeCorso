@@ -1,12 +1,4 @@
 module ApplicationHelper
-#  def truncate(text, length=20, sep='...')
-#    if text.length > length
-#      "#{text[0, length]}#{sep}"
-#    else
-#      text
-#    end
-#  end
-
   def latest_news(title="Latest News")
     html = NewsItem.latest.map do |item|
       "<div class=\"title\">#{link_to item.title, item}</div>
@@ -18,12 +10,15 @@ module ApplicationHelper
   end
 
   def menu
+    menu_html =
+      @menu_pages.roots.map do |m|
+        (m.url == request.path ? '<li class="selected">' : '<li>') +
+        "#{link_to m.title, m.url}</li>"
+      end.join('')
+
     html = <<-HTML
       <ul>
-      #{Refinery.menus.first.last.map do |m|
-          (m["url"] == request.path ? '<li class="selected">' : '<li>') +
-          "#{link_to m["title"], m["url"]}</li>"
-        end.join('')}
+        #{menu_html}
       </ul>
     HTML
 
