@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def latest_news(title="Latest News")
-    html = NewsItem.latest(5).map do |item|
+  def latest_news(items=5, title="Latest News")
+    html = NewsItem.latest(items).map do |item|
       "<div class=\"title\">#{link_to item.title, item}</div>
         <div class=\"publish-date\">Published #{item.publish_date.strftime("%B %d, %Y")}</div>
         <div class=\"body\">#{truncate(item.body, :length => 300, :omission => "#{link_to('... (continued)', item)}")}</div>"
