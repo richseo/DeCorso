@@ -30,7 +30,7 @@ namespace :deploy do
 
     sh "ssh -t #{USER}@#{HOST} '#{cmds}'"
     sh "scp #{USER}@#{HOST}:#{PATH}/config/database.yml #{DB_CONF}" 
-    sh "ssh -t #{USER}@#{HOST} 'cd #{PATH} && rake db:setup RAILS_ENV=production && rails runner -e production script/load-staff-members'"
+    sh "ssh -t #{USER}@#{HOST} 'cd #{PATH} && rake db:setup RAILS_ENV=production'"
   end
 
   task :virtual_host do
