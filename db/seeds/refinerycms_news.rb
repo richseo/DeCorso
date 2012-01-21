@@ -13,7 +13,7 @@ if defined?(::Page)
       :title => "News",
       :link_url => "/news",
       :deletable => false,
-      :position => ((Page.maximum(:position, :conditions => {:parent_id => nil}) || -1)+1),
+      :position => 3,
       :menu_match => "^/news.*$"
     )
 
