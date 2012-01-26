@@ -34,14 +34,17 @@
     });
 </script>
 
-<% @slides = Slide.order('position ASC') %>
 <div id="slides">
   <div class="slides_container">
-    <% @slides.each do |slide| %>
-      <div class="slide">
-        <a href="#" title="<%= slide.text %>"><%= image_fu slide.photo, '300x333' %></a>
-        <div class="caption" style="bottom:0"><p><%= slide.text %></p></div>
-      </div>
+    <% @slides = Slide.order('position ASC') %>
+    <% if @slides.empty? %>
+    <% else %>
+      <% @slides.each do |slide| %>
+        <div class="slide">
+          <a href="#" title="<%= slide.text %>"><%= image_fu slide.photo, '300x333' %></a>
+          <div class="caption" style="bottom:0"><p><%= slide.text %></p></div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>

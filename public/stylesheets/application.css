@@ -207,50 +207,55 @@ a, h1, h2, strong { color: #005dad }
 }
 
 #slides ul.pagination {
-	margin: 10px auto 0;
-	width:100px;
+  margin: 10px auto 0;
+  width: 100px;
 }
 
 #slides ul.pagination li {
-	float:left;
-	margin:0 1px;
-	list-style:none;
+  float: left;
+  margin: 0 1px;
+  list-style: none;
 }
 
 #slides ul.pagination li a {
-	display:block;
-	width:12px;
-	height:0;
-	padding-top:12px;
-	background-image:url(/images/pagination.png);
-	background-position:0 0;
-	float:left;
-	overflow:hidden;
+  display: block;
+  width: 12px;
+  height: 0;
+  padding-top: 12px;
+  background-image: url(/images/pagination.png);
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
 }
 
 #slides ul.pagination li.current a {
-	background-position:0 -12px;
+  background-position: 0 -12px;
 }
 
 #slides .caption {
-	z-index: 500;
-	position: absolute;
-    top: 0;
-	left: 0;
-	height: 50px;
-	padding: 0 20px 0 20px;
-	background: rgba(0,0,0,.5);
-	width: 540px;
-	font-size: 1em;
-	line-height: 1.33;
-	color: #fff;
-	text-shadow: none;
+  z-index: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  padding: 0 20px 0 20px;
+  background: rgba(0,0,0,.5);
+  width: 540px;
+  font-size: 1em;
+  line-height: 1.33;
+  color: #fff;
+  text-shadow: none;
 }
 
 .slides_container div.slide {
   width: 300px;
   height: 333px;
   display: block;
+}
+
+#highlights {
+  float: left;
+  width: 300px;
 }
 
 /* Staff Members */
