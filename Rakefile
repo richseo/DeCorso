@@ -9,9 +9,12 @@ namespace :deploy do
   PATH    = '/var/webapps/Makakilo-Elementary'.freeze
   GIT_URL = 'git@github.com:delonnewman/Makakilo-Elementary.git'.freeze
   DB_CONF = 'config/database.yml'.freeze
+  DB_DUMP = 'db/dump.sql'.freeze
   SSH_KEY = "#{ENV['HOME']}/.ssh/id_rsa.pub".freeze
-  PKGS    = 'libmysqlclient-dev libsqlite3-dev libmagickcore-dev'.freeze # Debian / Ubuntu Packages
   HTTPD_CONF = 'config/apache.conf'.freeze
+  
+  # Debian / Ubuntu Packages
+  PKGS    = 'libmysqlclient-dev libsqlite3-dev libmagickcore-dev'.freeze 
 
   desc "launch SSH on #{HOST}"
   task :shell do
@@ -29,8 +32,9 @@ namespace :deploy do
     }
 
     sh "ssh -t #{USER}@#{HOST} '#{cmds}'"
-    sh "scp #{USER}@#{HOST}:#{PATH}/config/database.yml #{DB_CONF}" 
-    sh "ssh -t #{USER}@#{HOST} 'cd #{PATH} && rake db:setup RAILS_ENV=production'"
+    sh "scp #{DB_CONF} #{USER}@#{HOST}:#{PATH}/config/database.yml" 
+    sh "scp #{DB_DUMP} #{USER}@#{HOST}:#{PATH}/#{DB_DUMP}" 
+    sh "ssh -t #{USER}@#{HOST} 'cd #{PATH} && rake db:load_dump RAILS_ENV=production'"
   end
 
   task :virtual_host do
@@ -74,7 +78,7 @@ namespace :deploy do
       cd #{PATH} &&
       git pull &&
       bundle install --deployment &&
-      rake db:migrate RAILS_ENV=production
+      rake db:load_dump RAILS_ENV=production
       touch #{PATH}/tmp/restart.txt
     }
 
@@ -83,7 +87,7 @@ namespace :deploy do
 end
 
 namespace :db do
-  desc "dump data to db/dump.sql"
+  desc "dump data to #{DB_DUMP}"
   task :dump do
     require 'yaml'
     config = YAML.load_file(DB_CONF)
@@ -93,6 +97,23 @@ namespace :db do
     passwd = db['password']
     schema = db['database']
 
-    sh "mysqldump -u #{user} --password=#{passwd} -h #{host} #{schema} > db/dump.sql"
+    sh "mysqldump -u #{user} --password=#{passwd} -h #{host} #{schema} > #{DB_DUMP}"
+  end
+
+  desc "load dumped data from #{DB_DUMP} to database"
+  task :load_dump do
+    if File.exists?(DB_DUMP)
+      require 'yaml'
+      config = YAML.load_file(DB_CONF)
+      db     = config[ENV['RAILS_ENV'] || 'development']
+      host   = db['host']
+      user   = db['username']
+      passwd = db['password']
+      schema = db['database']
+
+      sh "mysql -u #{user} --password=#{passwd} -h #{host} #{schema} < #{DB_DUMP}"
+    else
+      puts "#{DB_DUMP} does not exist"
+    end
   end
 end
