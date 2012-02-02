@@ -82,7 +82,8 @@ namespace :deploy do
       touch #{PATH}/tmp/restart.txt
     }
 
-    sh "rake db:dump && git commit -m db/dump.sql 'updated db/dump.sql' & git push && ssh -t #{USER}@#{HOST} '#{cmds}'"
+    sh "rake db:dump && scp #{DB_DUMP} #{USER}@#{HOST}:#{PATH}/#{DB_DUMP}" 
+    sh "git push && ssh -t #{USER}@#{HOST} '#{cmds}'"
   end
 end
 
