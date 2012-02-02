@@ -81,3 +81,18 @@ namespace :deploy do
     sh "git push && ssh -t #{USER}@#{HOST} '#{cmds}'"
   end
 end
+
+namespace :db do
+  desc "dump data to db/dump.sql"
+  task :dump do
+    require 'yaml'
+    config = YAML.load_file(DB_CONF)
+    db     = config[ENV['RAILS_ENV'] || 'development']
+    host   = db['host']
+    user   = db['username']
+    passwd = db['password']
+    schema = db['database']
+
+    sh "mysqldump -u #{user} --password=#{passwd} -h #{host} #{schema} > db/dump.sql"
+  end
+end

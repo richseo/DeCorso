@@ -80,3 +80,631 @@ capybara-*html
 
 config/database.yml
 *.sw*
+-- MySQL dump 10.13  Distrib 5.1.58, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: makakilo
+-- ------------------------------------------------------
+-- Server version	5.1.58-1ubuntu1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `images`
+--
+
+DROP TABLE IF EXISTS `images`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image_mime_type` varchar(255) DEFAULT NULL,
+  `image_name` varchar(255) DEFAULT NULL,
+  `image_size` int(11) DEFAULT NULL,
+  `image_width` int(11) DEFAULT NULL,
+  `image_height` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `image_uid` varchar(255) DEFAULT NULL,
+  `image_ext` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `images`
+--
+
+LOCK TABLES `images` WRITE;
+/*!40000 ALTER TABLE `images` DISABLE KEYS */;
+INSERT INTO `images` VALUES (1,'image/jpeg','Trudy Kawatachi.jpg',94368,320,400,'2012-02-02 03:03:02','2012-02-02 03:03:02','2012/02/01/17_03_02_475_Trudy_Kawatachi.jpg','jpg'),(2,'image/jpeg','James Kim Han.jpg',115366,320,400,'2012-02-02 03:03:02','2012-02-02 03:03:02','2012/02/01/17_03_02_889_James_Kim_Han.jpg','jpg'),(3,'image/jpeg','Susan Johnson.jpg',97034,320,400,'2012-02-02 03:03:03','2012-02-02 03:03:03','2012/02/01/17_03_03_174_Susan_Johnson.jpg','jpg'),(4,'image/jpeg','Karen Yogi.jpg',100059,320,400,'2012-02-02 03:03:03','2012-02-02 03:03:03','2012/02/01/17_03_03_462_Karen_Yogi.jpg','jpg'),(5,'image/jpeg','Teena Marie Melo.jpg',111684,320,400,'2012-02-02 03:03:03','2012-02-02 03:03:03','2012/02/01/17_03_03_704_Teena_Marie_Melo.jpg','jpg'),(6,'image/jpeg','Alisa Kuka.jpg',98930,320,400,'2012-02-02 03:03:04','2012-02-02 03:03:04','2012/02/01/17_03_04_250_Alisa_Kuka.jpg','jpg'),(7,'image/jpeg','Stanford Oyama.jpg',95478,320,400,'2012-02-02 03:03:04','2012-02-02 03:03:04','2012/02/01/17_03_04_495_Stanford_Oyama.jpg','jpg'),(8,'image/jpeg','Jenelle Kagawa.jpg',91943,320,400,'2012-02-02 03:03:04','2012-02-02 03:03:04','2012/02/01/17_03_04_721_Jenelle_Kagawa.jpg','jpg'),(9,'image/jpeg','Tracie Sturgeon.jpg',85863,320,400,'2012-02-02 03:03:04','2012-02-02 03:03:04','2012/02/01/17_03_04_967_Tracie_Sturgeon.jpg','jpg'),(10,'image/jpeg','Lisa Giles.jpg',115814,320,400,'2012-02-02 03:03:05','2012-02-02 03:03:05','2012/02/01/17_03_05_200_Lisa_Giles.jpg','jpg'),(11,'image/jpeg','Leticia Kahono-Vanic.jpg',115062,320,400,'2012-02-02 03:03:05','2012-02-02 03:03:05','2012/02/01/17_03_05_416_Leticia_Kahono_Vanic.jpg','jpg'),(12,'image/jpeg','Ashlie Salas-Selem.jpg',106195,320,400,'2012-02-02 03:03:05','2012-02-02 03:03:05','2012/02/01/17_03_05_681_Ashlie_Salas_Selem.jpg','jpg'),(13,'image/jpeg','Jennifer Kanoa.jpg',98342,320,400,'2012-02-02 03:03:05','2012-02-02 03:03:05','2012/02/01/17_03_05_905_Jennifer_Kanoa.jpg','jpg'),(14,'image/jpeg','Arlene Sunada.jpg',119604,320,400,'2012-02-02 03:03:06','2012-02-02 03:03:06','2012/02/01/17_03_06_103_Arlene_Sunada.jpg','jpg'),(15,'image/jpeg','Todi Otsuka.jpg',109869,320,400,'2012-02-02 03:03:06','2012-02-02 03:03:06','2012/02/01/17_03_06_411_Todi_Otsuka.jpg','jpg'),(16,'image/jpeg','Brandy Avilla-Morn.jpg',85720,320,400,'2012-02-02 03:03:06','2012-02-02 03:03:06','2012/02/01/17_03_06_655_Brandy_Avilla_Morn.jpg','jpg'),(17,'image/jpeg','Sherilyn Tong.jpg',96153,320,400,'2012-02-02 03:03:06','2012-02-02 03:03:06','2012/02/01/17_03_06_943_Sherilyn_Tong.jpg','jpg'),(18,'image/jpeg','Ralna Pacada.jpg',106223,320,400,'2012-02-02 03:03:07','2012-02-02 03:03:07','2012/02/01/17_03_07_181_Ralna_Pacada.jpg','jpg'),(19,'image/jpeg','Adrianne Belaras.jpg',93822,320,400,'2012-02-02 03:03:07','2012-02-02 03:03:07','2012/02/01/17_03_07_437_Adrianne_Belaras.jpg','jpg'),(20,'image/jpeg','Marilyn Correa.jpg',98380,320,400,'2012-02-02 03:03:07','2012-02-02 03:03:07','2012/02/01/17_03_07_680_Marilyn_Correa.jpg','jpg'),(21,'image/jpeg','Tracie Yamada.jpg',99578,320,400,'2012-02-02 03:03:07','2012-02-02 03:03:07','2012/02/01/17_03_07_887_Tracie_Yamada.jpg','jpg'),(22,'image/jpeg','Socorro Deguzman.jpg',125820,320,400,'2012-02-02 03:03:08','2012-02-02 03:03:08','2012/02/01/17_03_08_94_Socorro_Deguzman.jpg','jpg'),(23,'image/jpeg','Lynne Hirata.jpg',102235,320,400,'2012-02-02 03:03:08','2012-02-02 03:03:08','2012/02/01/17_03_08_337_Lynne_Hirata.jpg','jpg'),(24,'image/jpeg','Mako Castillo.jpg',111974,320,400,'2012-02-02 03:03:08','2012-02-02 03:03:08','2012/02/01/17_03_08_935_Mako_Castillo.jpg','jpg'),(25,'image/jpeg','Lisa Onzuka.jpg',95428,320,400,'2012-02-02 03:03:09','2012-02-02 03:03:09','2012/02/01/17_03_09_174_Lisa_Onzuka.jpg','jpg'),(26,'image/jpeg','Lisa Shindo.jpg',93849,320,400,'2012-02-02 03:03:09','2012-02-02 03:03:09','2012/02/01/17_03_09_394_Lisa_Shindo.jpg','jpg'),(27,'image/jpeg','Sheri Yoshida.jpg',111921,320,400,'2012-02-02 03:03:09','2012-02-02 03:03:09','2012/02/01/17_03_09_594_Sheri_Yoshida.jpg','jpg'),(28,'image/jpeg','Amy Kamakaiwi.jpg',101925,320,400,'2012-02-02 03:03:09','2012-02-02 03:03:09','2012/02/01/17_03_09_819_Amy_Kamakaiwi.jpg','jpg'),(29,'image/jpeg','Healani Ligon.jpg',127272,320,400,'2012-02-02 03:03:10','2012-02-02 03:03:10','2012/02/01/17_03_10_55_Healani_Ligon.jpg','jpg'),(30,'image/jpeg','Manuel Punzal.jpg',97345,320,400,'2012-02-02 03:03:10','2012-02-02 03:03:10','2012/02/01/17_03_10_324_Manuel_Punzal.jpg','jpg'),(31,'image/jpeg','Deborah Naone.jpg',91390,320,400,'2012-02-02 03:03:10','2012-02-02 03:03:10','2012/02/01/17_03_10_537_Deborah_Naone.jpg','jpg'),(32,'image/jpeg','Betty Nishihara.jpg',110251,320,400,'2012-02-02 03:03:10','2012-02-02 03:03:10','2012/02/01/17_03_10_769_Betty_Nishihara.jpg','jpg'),(33,'image/jpeg','Erin Odo.jpg',102868,320,400,'2012-02-02 03:03:11','2012-02-02 03:03:11','2012/02/01/17_03_11_40_Erin_Odo.jpg','jpg'),(34,'image/jpeg','Sean Tajima.jpg',101625,320,400,'2012-02-02 03:03:11','2012-02-02 03:03:11','2012/02/01/17_03_11_556_Sean_Tajima.jpg','jpg'),(35,'image/jpeg','Ann Nakamura.jpg',98077,320,400,'2012-02-02 03:03:11','2012-02-02 03:03:11','2012/02/01/17_03_11_785_Ann_Nakamura.jpg','jpg');
+/*!40000 ALTER TABLE `images` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `links`
+--
+
+DROP TABLE IF EXISTS `links`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `links` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_links_on_id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `links`
+--
+
+LOCK TABLES `links` WRITE;
+/*!40000 ALTER TABLE `links` DISABLE KEYS */;
+/*!40000 ALTER TABLE `links` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `news_item_translations`
+--
+
+DROP TABLE IF EXISTS `news_item_translations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `news_item_translations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `news_item_id` int(11) DEFAULT NULL,
+  `locale` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `body` text,
+  `external_url` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_news_item_translations_on_news_item_id` (`news_item_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `news_item_translations`
+--
+
+LOCK TABLES `news_item_translations` WRITE;
+/*!40000 ALTER TABLE `news_item_translations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `news_item_translations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `news_items`
+--
+
+DROP TABLE IF EXISTS `news_items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `news_items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `body` text,
+  `publish_date` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `image_id` int(11) DEFAULT NULL,
+  `expiration_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_news_items_on_id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `news_items`
+--
+
+LOCK TABLES `news_items` WRITE;
+/*!40000 ALTER TABLE `news_items` DISABLE KEYS */;
+/*!40000 ALTER TABLE `news_items` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `page_part_translations`
+--
+
+DROP TABLE IF EXISTS `page_part_translations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `page_part_translations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `page_part_id` int(11) DEFAULT NULL,
+  `locale` varchar(255) DEFAULT NULL,
+  `body` text,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_page_part_translations_on_page_part_id` (`page_part_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `page_part_translations`
+--
+
+LOCK TABLES `page_part_translations` WRITE;
+/*!40000 ALTER TABLE `page_part_translations` DISABLE KEYS */;
+INSERT INTO `page_part_translations` VALUES (1,1,'en',NULL,'2012-02-02 03:03:01','2012-02-02 03:03:01'),(2,2,'en',NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02'),(3,3,'en',NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02'),(4,4,'en',NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02'),(5,5,'en',NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(6,6,'en',NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(7,7,'en','<p>Welcome to our site. This is just a place holder page while we gather our content.</p>','2012-02-02 03:03:12','2012-02-02 03:03:12'),(8,8,'en','<h2>Sorry, there was a problem...</h2><p>The page you requested was not found.</p><p><a href=\'/\'>Return to the home page</a></p>','2012-02-02 03:03:12','2012-02-02 03:03:12'),(9,9,'en','<p>This is just a standard text page example. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus dolor, hendrerit sit amet, aliquet nec, posuere sed, purus. Nullam et velit iaculis odio sagittis placerat. Duis metus tellus, pellentesque ut, luctus id, egestas a, lorem. Praesent vitae mauris. Aliquam sed nulla. Sed id nunc vitae leo suscipit viverra. Proin at leo ut lacus consequat rhoncus. In hac habitasse platea dictumst. Nunc quis tortor sed libero hendrerit dapibus.\n\nInteger interdum purus id erat. Duis nec velit vitae dolor mattis euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse pellentesque dignissim lacus. Nulla semper euismod arcu. Suspendisse egestas, erat a consectetur dapibus, felis orci cursus eros, et sollicitudin purus urna et metus. Integer eget est sed nunc euismod vestibulum. Integer nulla dui, tristique in, euismod et, interdum imperdiet, enim. Mauris at lectus. Sed egestas tortor nec mi.</p>\n','2012-02-02 03:03:12','2012-02-02 03:03:12'),(10,10,'en','<p>92-657 Anipeahi Street<br />\nKapolei, Hawai\'i 96707</p>\n\n<p>Phone: (808) 672-1122<br />\nFax: (808) 672-1128</p>\n\n<iframe marginheight=\"0\" marginwidth=\"0\" src=\"http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=92-657+Anipeahi+Street+Kapolei,+Hawai%27i+96707&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=40.545434,79.013672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=92+Anipeahi+St,+Kapolei,+Hawaii+96707&amp;t=m&amp;ll=21.347424,-158.082876&amp;spn=0.02798,0.036478&amp;z=14&amp;output=embed\" frameborder=\"0\" height=\"350\" scrolling=\"no\" width=\"425\"></iframe>\n<br /><small><a href=\"http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=92-657+Anipeahi+Street+Kapolei,+Hawai%27i+96707&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=40.545434,79.013672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=92+Anipeahi+St,+Kapolei,+Hawaii+96707&amp;t=m&amp;ll=21.347424,-158.082876&amp;spn=0.02798,0.036478&amp;z=14\" style=\"color:#0000FF;text-align:left\">View Larger Map</a>\n</small>\n','2012-02-02 03:03:12','2012-02-02 03:03:12'),(11,11,'en',NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(12,12,'en',NULL,'2012-02-02 03:03:13','2012-02-02 03:03:13');
+/*!40000 ALTER TABLE `page_part_translations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `page_parts`
+--
+
+DROP TABLE IF EXISTS `page_parts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `page_parts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `page_id` int(11) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `body` text,
+  `position` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_page_parts_on_id` (`id`),
+  KEY `index_page_parts_on_page_id` (`page_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `page_parts`
+--
+
+LOCK TABLES `page_parts` WRITE;
+/*!40000 ALTER TABLE `page_parts` DISABLE KEYS */;
+INSERT INTO `page_parts` VALUES (1,1,'Body',NULL,NULL,'2012-02-02 03:03:01','2012-02-02 03:03:01'),(2,1,'Side Body',NULL,NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02'),(3,2,'Body',NULL,NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02'),(4,2,'Side Body',NULL,NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02'),(5,3,'Body',NULL,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(6,3,'Side Body',NULL,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(7,4,'Body','<p>Welcome to our site. This is just a place holder page while we gather our content.</p>',0,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(8,5,'Body','<h2>Sorry, there was a problem...</h2><p>The page you requested was not found.</p><p><a href=\'/\'>Return to the home page</a></p>',0,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(9,6,'Body','<p>This is just a standard text page example. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus dolor, hendrerit sit amet, aliquet nec, posuere sed, purus. Nullam et velit iaculis odio sagittis placerat. Duis metus tellus, pellentesque ut, luctus id, egestas a, lorem. Praesent vitae mauris. Aliquam sed nulla. Sed id nunc vitae leo suscipit viverra. Proin at leo ut lacus consequat rhoncus. In hac habitasse platea dictumst. Nunc quis tortor sed libero hendrerit dapibus.\n\nInteger interdum purus id erat. Duis nec velit vitae dolor mattis euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse pellentesque dignissim lacus. Nulla semper euismod arcu. Suspendisse egestas, erat a consectetur dapibus, felis orci cursus eros, et sollicitudin purus urna et metus. Integer eget est sed nunc euismod vestibulum. Integer nulla dui, tristique in, euismod et, interdum imperdiet, enim. Mauris at lectus. Sed egestas tortor nec mi.</p>\n',0,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(10,7,'Body','<p>92-657 Anipeahi Street<br />\nKapolei, Hawai\'i 96707</p>\n\n<p>Phone: (808) 672-1122<br />\nFax: (808) 672-1128</p>\n\n<iframe marginheight=\"0\" marginwidth=\"0\" src=\"http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=92-657+Anipeahi+Street+Kapolei,+Hawai%27i+96707&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=40.545434,79.013672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=92+Anipeahi+St,+Kapolei,+Hawaii+96707&amp;t=m&amp;ll=21.347424,-158.082876&amp;spn=0.02798,0.036478&amp;z=14&amp;output=embed\" frameborder=\"0\" height=\"350\" scrolling=\"no\" width=\"425\"></iframe>\n<br /><small><a href=\"http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=92-657+Anipeahi+Street+Kapolei,+Hawai%27i+96707&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=40.545434,79.013672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=92+Anipeahi+St,+Kapolei,+Hawaii+96707&amp;t=m&amp;ll=21.347424,-158.082876&amp;spn=0.02798,0.036478&amp;z=14\" style=\"color:#0000FF;text-align:left\">View Larger Map</a>\n</small>\n',0,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(11,8,'Body',NULL,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(12,8,'Side Body',NULL,NULL,'2012-02-02 03:03:13','2012-02-02 03:03:13');
+/*!40000 ALTER TABLE `page_parts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `page_translations`
+--
+
+DROP TABLE IF EXISTS `page_translations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `page_translations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `page_id` int(11) DEFAULT NULL,
+  `locale` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `custom_title` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_page_translations_on_page_id` (`page_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `page_translations`
+--
+
+LOCK TABLES `page_translations` WRITE;
+/*!40000 ALTER TABLE `page_translations` DISABLE KEYS */;
+INSERT INTO `page_translations` VALUES (1,1,'en','Links',NULL,'2012-02-02 03:03:01','2012-02-02 03:03:01'),(2,2,'en','Staff Members',NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02'),(3,3,'en','News',NULL,'2012-02-02 03:03:11','2012-02-02 03:03:11'),(4,4,'en','Home',NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(5,5,'en','Page not found',NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(6,6,'en','About',NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(7,7,'en','Contact',NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(8,8,'en','Slides',NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12');
+/*!40000 ALTER TABLE `page_translations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pages`
+--
+
+DROP TABLE IF EXISTS `pages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  `path` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `show_in_menu` tinyint(1) DEFAULT '1',
+  `link_url` varchar(255) DEFAULT NULL,
+  `menu_match` varchar(255) DEFAULT NULL,
+  `deletable` tinyint(1) DEFAULT '1',
+  `custom_title_type` varchar(255) DEFAULT 'none',
+  `draft` tinyint(1) DEFAULT '0',
+  `skip_to_first_child` tinyint(1) DEFAULT '0',
+  `lft` int(11) DEFAULT NULL,
+  `rgt` int(11) DEFAULT NULL,
+  `depth` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_pages_on_depth` (`depth`),
+  KEY `index_pages_on_id` (`id`),
+  KEY `index_pages_on_lft` (`lft`),
+  KEY `index_pages_on_parent_id` (`parent_id`),
+  KEY `index_pages_on_rgt` (`rgt`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pages`
+--
+
+LOCK TABLES `pages` WRITE;
+/*!40000 ALTER TABLE `pages` DISABLE KEYS */;
+INSERT INTO `pages` VALUES (1,NULL,-4,NULL,'2012-02-02 03:03:01','2012-02-02 03:03:01',1,'/links','^/links(\\/|\\/.+?|)$',0,'none',0,0,11,12,NULL),(2,NULL,2,NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02',1,'/staff_members','^/staff_members(\\/|\\/.+?|)$',0,'none',0,0,7,8,NULL),(3,NULL,3,NULL,'2012-02-02 03:03:11','2012-02-02 03:03:11',1,'/news','^/news.*$',0,'none',0,0,9,10,NULL),(4,NULL,0,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12',1,'/',NULL,0,'none',0,0,1,4,NULL),(5,4,0,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12',0,NULL,'^/404$',0,'none',0,0,2,3,NULL),(6,NULL,-1,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12',1,NULL,NULL,1,'none',0,0,5,6,NULL),(7,NULL,-5,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12',1,NULL,NULL,1,'none',0,0,13,14,NULL),(8,NULL,NULL,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12',0,NULL,NULL,0,'none',0,0,15,16,NULL);
+/*!40000 ALTER TABLE `pages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `refinery_settings`
+--
+
+DROP TABLE IF EXISTS `refinery_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `refinery_settings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `value` text,
+  `destroyable` tinyint(1) DEFAULT '1',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `scoping` varchar(255) DEFAULT NULL,
+  `restricted` tinyint(1) DEFAULT '0',
+  `callback_proc_as_string` varchar(255) DEFAULT NULL,
+  `form_value_type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_refinery_settings_on_name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `refinery_settings`
+--
+
+LOCK TABLES `refinery_settings` WRITE;
+/*!40000 ALTER TABLE `refinery_settings` DISABLE KEYS */;
+INSERT INTO `refinery_settings` VALUES (1,'i18n_translation_enabled','--- \'true\'\n',1,'2012-02-02 03:03:01','2012-02-02 03:03:01','refinery',0,NULL,'text_area'),(2,'i18n_translation_default_frontend_locale','--- :en\n...\n',1,'2012-02-02 03:03:01','2012-02-02 03:03:01','refinery',0,NULL,'text_area'),(3,'use_marketable_urls','--- \'true\'\n',1,'2012-02-02 03:03:01','2012-02-02 03:03:01','pages',0,NULL,'text_area'),(4,'default_page_parts','---\n- Body\n- Side Body\n',1,'2012-02-02 03:03:01','2012-02-02 03:03:01',NULL,0,NULL,'text_area'),(5,'dragonfly_secret','--- c08b0ba76361aa0ac45d3fb19095bca7484e133a919a3a89\n...\n',1,'2012-02-02 03:03:59','2012-02-02 03:03:59',NULL,0,NULL,'text_area'),(6,'approximate_ascii','--- \'false\'\n',1,'2012-02-02 03:04:01','2012-02-02 03:04:01','pages',0,NULL,'text_area'),(7,'strip_non_ascii','--- \'false\'\n',1,'2012-02-02 03:04:01','2012-02-02 03:04:01','pages',0,NULL,'text_area'),(8,'i18n_translation_locales','---\n:en: English\n:fr: FranÃ§ais\n:nl: Nederlands\n:pt-BR: PortuguÃªs\n:da: Dansk\n:nb: Norsk BokmÃ¥l\n:sl: Slovenian\n:es: EspaÃ±ol\n:it: Italiano\n:de: Deutsch\n:lv: Latviski\n:ru: Ð ÑƒÑÑÐºÐ¸Ð¹\n:sv: Svenska\n:pl: Polski\n:zh-CN: Simplified Chinese\n:zh-TW: Traditional Chinese\n:el: Î•Î»Î»Î·Î½Î¹ÎºÎ¬\n:rs: Srpski\n:cs: ÄŒesky\n:sk: SlovenskÃ½\n:jp: æ—¥æœ¬èªž\n',1,'2012-02-02 03:04:05','2012-02-02 03:04:05','refinery',0,NULL,'text_area'),(9,'site_name','--- Company Name\n...\n',1,'2012-02-02 03:04:17','2012-02-02 03:04:17',NULL,0,NULL,'text_area'),(10,'use_resource_caching','--- \'true\'\n',1,'2012-02-02 03:04:17','2012-02-02 03:04:17',NULL,0,NULL,'text_area'),(11,'use_google_ajax_libraries','--- \'false\'\n',1,'2012-02-02 03:04:17','2012-02-02 03:04:17',NULL,0,NULL,'text_area'),(12,'i18n_translation_default_locale','--- :en\n...\n',1,'2012-02-02 03:04:36','2012-02-02 03:04:36','refinery',0,NULL,'text_area'),(13,'i18n_translation_current_locale','--- :en\n...\n',1,'2012-02-02 03:04:36','2012-02-02 03:04:36','refinery',0,NULL,'text_area'),(14,'cache_pages_backend','--- \'false\'\n',1,'2012-02-02 03:04:37','2012-02-02 03:04:37',NULL,0,NULL,'text_area'),(15,'i18n_translation_frontend_locales','---\n- :en\n',1,'2012-02-02 03:04:38','2012-02-02 03:04:38','refinery',0,NULL,'text_area'),(16,'menu_hide_children','--- \'false\'\n',1,'2012-02-02 03:04:56','2012-02-02 03:04:56',NULL,0,NULL,'text_area'),(17,'page_title','---\n:chain_page_title: false\n:ancestors:\n  :separator: ! \' | \'\n  :class: ancestors\n  :tag: span\n:page_title:\n  :class: !!null \n  :tag: !!null \n  :wrap_if_not_chained: false\n',1,'2012-02-02 03:05:20','2012-02-02 03:05:20',NULL,0,NULL,'text_area');
+/*!40000 ALTER TABLE `refinery_settings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `resources`
+--
+
+DROP TABLE IF EXISTS `resources`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `resources` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `file_mime_type` varchar(255) DEFAULT NULL,
+  `file_name` varchar(255) DEFAULT NULL,
+  `file_size` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `file_uid` varchar(255) DEFAULT NULL,
+  `file_ext` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `resources`
+--
+
+LOCK TABLES `resources` WRITE;
+/*!40000 ALTER TABLE `resources` DISABLE KEYS */;
+/*!40000 ALTER TABLE `resources` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `roles`
+--
+
+DROP TABLE IF EXISTS `roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `roles`
+--
+
+LOCK TABLES `roles` WRITE;
+/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
+INSERT INTO `roles` VALUES (1,'Refinery'),(2,'Superuser');
+/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `roles_users`
+--
+
+DROP TABLE IF EXISTS `roles_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `roles_users` (
+  `user_id` int(11) DEFAULT NULL,
+  `role_id` int(11) DEFAULT NULL,
+  KEY `index_roles_users_on_role_id_and_user_id` (`role_id`,`user_id`),
+  KEY `index_roles_users_on_user_id_and_role_id` (`user_id`,`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `roles_users`
+--
+
+LOCK TABLES `roles_users` WRITE;
+/*!40000 ALTER TABLE `roles_users` DISABLE KEYS */;
+INSERT INTO `roles_users` VALUES (1,1),(1,2);
+/*!40000 ALTER TABLE `roles_users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `schema_migrations`
+--
+
+DROP TABLE IF EXISTS `schema_migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `schema_migrations` (
+  `version` varchar(255) NOT NULL,
+  UNIQUE KEY `unique_schema_migrations` (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `schema_migrations`
+--
+
+LOCK TABLES `schema_migrations` WRITE;
+/*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
+INSERT INTO `schema_migrations` VALUES ('20111115070652'),('20111115070653'),('20111115070654'),('20111115070655'),('20111115070656'),('20111115070657'),('20111115070658'),('20111115070659'),('20111115070660'),('20111115070661'),('20111115070662'),('20111115070663'),('20111115070664'),('20111115070665'),('20111115070666'),('20111115070667'),('20111115070668'),('20111115071517'),('20111115071518'),('20111115071519'),('20111115071520'),('20111117050115'),('20111120082832'),('20111120091156'),('20111201211353'),('20111201211354'),('20111201211355'),('20111201211356'),('20111201211357'),('20111201211358'),('20120112104839'),('20120124054537');
+/*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `seo_meta`
+--
+
+DROP TABLE IF EXISTS `seo_meta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `seo_meta` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `seo_meta_id` int(11) DEFAULT NULL,
+  `seo_meta_type` varchar(255) DEFAULT NULL,
+  `browser_title` varchar(255) DEFAULT NULL,
+  `meta_keywords` varchar(255) DEFAULT NULL,
+  `meta_description` text,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_seo_meta_on_id` (`id`),
+  KEY `index_seo_meta_on_seo_meta_id_and_seo_meta_type` (`seo_meta_id`,`seo_meta_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `seo_meta`
+--
+
+LOCK TABLES `seo_meta` WRITE;
+/*!40000 ALTER TABLE `seo_meta` DISABLE KEYS */;
+INSERT INTO `seo_meta` VALUES (1,1,'Page::Translation',NULL,NULL,NULL,'2012-02-02 03:03:01','2012-02-02 03:03:01'),(2,2,'Page::Translation',NULL,NULL,NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02'),(3,3,'Page::Translation',NULL,NULL,NULL,'2012-02-02 03:03:11','2012-02-02 03:03:11'),(4,4,'Page::Translation',NULL,NULL,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(5,5,'Page::Translation',NULL,NULL,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(6,6,'Page::Translation',NULL,NULL,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(7,7,'Page::Translation',NULL,NULL,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12'),(8,8,'Page::Translation',NULL,NULL,NULL,'2012-02-02 03:03:12','2012-02-02 03:03:12');
+/*!40000 ALTER TABLE `seo_meta` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `slides`
+--
+
+DROP TABLE IF EXISTS `slides`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `slides` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `photo_id` int(11) DEFAULT NULL,
+  `text` varchar(255) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_slides_on_id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `slides`
+--
+
+LOCK TABLES `slides` WRITE;
+/*!40000 ALTER TABLE `slides` DISABLE KEYS */;
+/*!40000 ALTER TABLE `slides` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `slugs`
+--
+
+DROP TABLE IF EXISTS `slugs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `slugs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `sluggable_id` int(11) DEFAULT NULL,
+  `sequence` int(11) NOT NULL DEFAULT '1',
+  `sluggable_type` varchar(40) DEFAULT NULL,
+  `scope` varchar(40) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `locale` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `index_slugs_on_n_s_s_and_s` (`name`,`sluggable_type`,`scope`,`sequence`),
+  KEY `index_slugs_on_locale` (`locale`),
+  KEY `index_slugs_on_sluggable_id` (`sluggable_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `slugs`
+--
+
+LOCK TABLES `slugs` WRITE;
+/*!40000 ALTER TABLE `slugs` DISABLE KEYS */;
+INSERT INTO `slugs` VALUES (1,'links-page',1,1,'Page',NULL,'2012-02-02 03:03:01','en'),(2,'staff-members',2,1,'Page',NULL,'2012-02-02 03:03:02','en'),(3,'news-page',3,1,'Page',NULL,'2012-02-02 03:03:11','en'),(4,'home',4,1,'Page',NULL,'2012-02-02 03:03:12','en'),(5,'page-not-found',5,1,'Page',NULL,'2012-02-02 03:03:12','en'),(6,'about',6,1,'Page',NULL,'2012-02-02 03:03:12','en'),(7,'contact',7,1,'Page',NULL,'2012-02-02 03:03:12','en'),(8,'slides-page',8,1,'Page',NULL,'2012-02-02 03:03:12','en'),(9,'admin',1,1,'User',NULL,'2012-02-02 03:04:35','en');
+/*!40000 ALTER TABLE `slugs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `staff_members`
+--
+
+DROP TABLE IF EXISTS `staff_members`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `staff_members` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `photo_id` int(11) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_staff_members_on_id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `staff_members`
+--
+
+LOCK TABLES `staff_members` WRITE;
+/*!40000 ALTER TABLE `staff_members` DISABLE KEYS */;
+INSERT INTO `staff_members` VALUES (1,'trudy_kawatachi@notes.k12.hi.us',1,NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02','Trudy','Kawatachi'),(2,'james_kim_han@notes.k12.hi.us',2,NULL,'2012-02-02 03:03:02','2012-02-02 03:03:02','James','Kim'),(3,'susan_johnson@notes.k12.hi.us',3,NULL,'2012-02-02 03:03:03','2012-02-02 03:03:03','Susan','Johnson'),(4,'karen_yogi@notes.k12.hi.us',4,NULL,'2012-02-02 03:03:03','2012-02-02 03:03:03','Karen','Yogi'),(5,'teena_marie_melo@notes.k12.hi.us',5,NULL,'2012-02-02 03:03:04','2012-02-02 03:03:04','Teena','Marie'),(6,'alisa_kuka@notes.k12.hi.us',6,NULL,'2012-02-02 03:03:04','2012-02-02 03:03:04','Alisa','Kuka'),(7,'stanford_oyama@notes.k12.hi.us',7,NULL,'2012-02-02 03:03:04','2012-02-02 03:03:04','Stanford','Oyama'),(8,'jenelle_kagawa@notes.k12.hi.us',8,NULL,'2012-02-02 03:03:04','2012-02-02 03:03:04','Jenelle','Kagawa'),(9,'tracie_sturgeon@notes.k12.hi.us',9,NULL,'2012-02-02 03:03:05','2012-02-02 03:03:05','Tracie','Sturgeon'),(10,'lisa_giles@notes.k12.hi.us',10,NULL,'2012-02-02 03:03:05','2012-02-02 03:03:05','Lisa','Giles'),(11,'leticia_kahono-vanic@notes.k12.hi.us',11,NULL,'2012-02-02 03:03:05','2012-02-02 03:03:05','Leticia','Kahono-Vanic'),(12,'ashlie_salas-selem@notes.k12.hi.us',12,NULL,'2012-02-02 03:03:05','2012-02-02 03:03:05','Ashlie','Salas-Selem'),(13,'jennifer_kanoa@notes.k12.hi.us',13,NULL,'2012-02-02 03:03:05','2012-02-02 03:03:05','Jennifer','Kanoa'),(14,'arlene_sunada@notes.k12.hi.us',14,NULL,'2012-02-02 03:03:06','2012-02-02 03:03:06','Arlene','Sunada'),(15,'todi_otsuka@notes.k12.hi.us',15,NULL,'2012-02-02 03:03:06','2012-02-02 03:03:06','Todi','Otsuka'),(16,'brandy_avilla-morn@notes.k12.hi.us',16,NULL,'2012-02-02 03:03:06','2012-02-02 03:03:06','Brandy','Avilla-Morn'),(17,'sherilyn_tong@notes.k12.hi.us',17,NULL,'2012-02-02 03:03:07','2012-02-02 03:03:07','Sherilyn','Tong'),(18,'ralna_pacada@notes.k12.hi.us',18,NULL,'2012-02-02 03:03:07','2012-02-02 03:03:07','Ralna','Pacada'),(19,'adrianne_belaras@notes.k12.hi.us',19,NULL,'2012-02-02 03:03:07','2012-02-02 03:03:07','Adrianne','Belaras'),(20,'marilyn_correa@notes.k12.hi.us',20,NULL,'2012-02-02 03:03:07','2012-02-02 03:03:07','Marilyn','Correa'),(21,'tracie_yamada@notes.k12.hi.us',21,NULL,'2012-02-02 03:03:07','2012-02-02 03:03:07','Tracie','Yamada'),(22,'socorro_deguzman@notes.k12.hi.us',22,NULL,'2012-02-02 03:03:08','2012-02-02 03:03:08','Socorro','Deguzman'),(23,'lynne_hirata@notes.k12.hi.us',23,NULL,'2012-02-02 03:03:08','2012-02-02 03:03:08','Lynne','Hirata'),(24,'mako_castillo@notes.k12.hi.us',24,NULL,'2012-02-02 03:03:09','2012-02-02 03:03:09','Mako','Castillo'),(25,'lisa_onzuka@notes.k12.hi.us',25,NULL,'2012-02-02 03:03:09','2012-02-02 03:03:09','Lisa','Onzuka'),(26,'lisa_shindo@notes.k12.hi.us',26,NULL,'2012-02-02 03:03:09','2012-02-02 03:03:09','Lisa','Shindo'),(27,'sheri_yoshida@notes.k12.hi.us',27,NULL,'2012-02-02 03:03:09','2012-02-02 03:03:09','Sheri','Yoshida'),(28,'amy_kamakaiwi@notes.k12.hi.us',28,NULL,'2012-02-02 03:03:09','2012-02-02 03:03:09','Amy','Kamakaiwi'),(29,'healani_ligon@notes.k12.hi.us',29,NULL,'2012-02-02 03:03:10','2012-02-02 03:03:10','Healani','Ligon'),(30,'manuel_punzal@notes.k12.hi.us',30,NULL,'2012-02-02 03:03:10','2012-02-02 03:03:10','Manuel','Punzal'),(31,'deborah_naone@notes.k12.hi.us',31,NULL,'2012-02-02 03:03:10','2012-02-02 03:03:10','Deborah','Naone'),(32,'betty_nishihara@notes.k12.hi.us',32,NULL,'2012-02-02 03:03:10','2012-02-02 03:03:10','Betty','Nishihara'),(33,'erin_odo@notes.k12.hi.us',33,NULL,'2012-02-02 03:03:11','2012-02-02 03:03:11','Erin','Odo'),(34,'sean_tajima@notes.k12.hi.us',34,NULL,'2012-02-02 03:03:11','2012-02-02 03:03:11','Sean','Tajima'),(35,'ann_nakamura@notes.k12.hi.us',35,NULL,'2012-02-02 03:03:11','2012-02-02 03:03:11','Ann','Nakamura');
+/*!40000 ALTER TABLE `staff_members` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_plugins`
+--
+
+DROP TABLE IF EXISTS `user_plugins`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_plugins` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `index_unique_user_plugins` (`user_id`,`name`),
+  KEY `index_user_plugins_on_title` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_plugins`
+--
+
+LOCK TABLES `user_plugins` WRITE;
+/*!40000 ALTER TABLE `user_plugins` DISABLE KEYS */;
+INSERT INTO `user_plugins` VALUES (11,1,'links',0),(12,1,'refinery_dashboard',1),(13,1,'refinery_files',2),(14,1,'refinery_images',3),(15,1,'refinery_pages',4),(16,1,'refinery_settings',5),(17,1,'refinery_users',6),(18,1,'refinerycms_news',7),(19,1,'slides',8),(20,1,'staff_members',9),(21,1,'refinerycms_base',10),(22,1,'refinery_core',11),(23,1,'refinery_dialogs',12),(24,1,'refinery_i18n',13),(25,1,'refinery_generators',14);
+/*!40000 ALTER TABLE `user_plugins` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `encrypted_password` varchar(255) NOT NULL,
+  `persistence_token` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `perishable_token` varchar(255) DEFAULT NULL,
+  `current_sign_in_at` datetime DEFAULT NULL,
+  `last_sign_in_at` datetime DEFAULT NULL,
+  `current_sign_in_ip` varchar(255) DEFAULT NULL,
+  `last_sign_in_ip` varchar(255) DEFAULT NULL,
+  `sign_in_count` int(11) DEFAULT NULL,
+  `remember_token` varchar(255) DEFAULT NULL,
+  `reset_password_token` varchar(255) DEFAULT NULL,
+  `remember_created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `index_users_on_id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'admin','iktome+makakilo@gmail.com','$2a$10$WEN7vlFGmzEECWfjXi79tOpXhwykH0iBQKhcWMD0mq9IHUFQk5nSS',NULL,'2012-02-02 03:04:35','2012-02-02 03:04:36',NULL,'2012-02-02 03:04:36','2012-02-02 03:04:36','127.0.0.1','127.0.0.1',1,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-02-01 17:17:03
+db/dump.sql
+development:
+  adapter: mysql
+  database: makakilo
+  username: makakilo
+  password: 1Place4School
+  host: localhost
+  timeout: 5000
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: sqlite3
+  database: db/production.sqlite3
+  pool: 5
+  timeout: 5000
