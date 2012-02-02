@@ -157,17 +157,14 @@ a, h1, h2, strong { color: #005dad }
 
 #footer {
   margin-top: 10px;
-  border-top: solid 1pt #005dad;
-  padding-top: 15px;
-  padding-bottom: 15px;
   width: 900px;
   background: url(../images/container-bg.png) top center;
   float: right;
 }
 
 #footer #mission {
-  padding-left: 50px;
-  width: 500px;
+  padding-left: 20px;
+  width: 600px;
   float: left;
 }
 
@@ -176,17 +173,49 @@ a, h1, h2, strong { color: #005dad }
   width: 134px;
   height: 117px;
   float: left;
+  margin-right: 10px;
 }
 
 #footer #mission p {
-  width: 350px;
+  width: 450px;
   float: right;
   font-size: 12pt;
 }
 
 #footer #bottom-contact {
-  width: 300px;
+  width: 210px;
   float: right;
+}
+
+#footer #bottom-contact strong {
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+#footer #bottom-contact .address {
+  margin-bottom: 5px;
+}
+
+#footer .footer-wrapper {
+  background: url(../images/footer-grad.png) bottom repeat-x;
+  margin-left: 24px;
+  width: 850px;
+}
+
+#footer .top {
+  border-top: solid 1pt #005dad;
+  padding-top: 15px;
+  width: 850px;
+  /*margin-left: 24px;*/
+  clear: all; 
+}
+
+#footer .bottom {
+  font-size: .8em;
+  width: 800px;
+  margin-left: 20px;
+  margin-top: 150px;
+  padding-bottom: 15px;
 }
 
 #highlights {

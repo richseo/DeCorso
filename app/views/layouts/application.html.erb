@@ -33,27 +33,39 @@
 		<%= yield %>
 	</div>
 	<div id="footer">
-        <div id="mission">
-          <div id="small-logo"></div>
-          <p>Our mission is to provide a positive, safe, nurturing, and enriching environment which will enable and encourage
-          our students to develop to their fullest potential.
-          <%= link_to "See our about page for more.", '/mission' %></p>
-        </div>
-
-        <div id="bottom-contact">
-          <strong>Contact Information</strong>
-          <div class="address">
-            92-657 Anipeahi Street<br />
-            Kapolei, Hawai'i 96707
+      <div class="footer-wrapper">
+        <div class="top">
+          <div id="mission">
+            <div id="small-logo"></div>
+            <p>Our mission is to provide a positive, safe, nurturing, and enriching environment which will enable and encourage
+            our students to develop to their fullest potential.
+            <%= link_to "See our about page for more.", '/about' %></p>
           </div>
-          <div class="phones">
-            Phone: (808) 672-1122<br />
-            Fax: (808) 672-1128
+  
+          <div id="bottom-contact">
+            <strong>Contact Information</strong>
+            <div class="address">
+              92-657 Anipeahi Street<br />
+              Kapolei, Hawai'i 96707
+            </div>
+            <div class="phones">
+              Phone: (808) 672-1122<br />
+              Fax: (808) 672-1128
+            </div>
           </div>
         </div>
-	</div>
-</div>
-</div>
+        <div class="bottom">
+          <div id="credits">
+            <p>All branding &amp; content copyright &copy; 2012 Makakilo Elementary School<br />
+            All source code copyright &copy; 2011-2012 Delon Newman and all other copyright holders</p>
+  
+            <p>Development &amp; Design by <%=link_to 'Delon Newman', 'mailto:delon dot newman at gmail dot com' %> and <%=link_to 'SEO Hawaii', 'http://seohawaii.com' %></p>
+          </div>
+        </div>
+      </div> <!-- .footer-wrapper -->
+    </div> <!-- #footer -->
+  </div> <!-- #container -->
+</div> <!-- #puaas -->
 
 </body>
 </html>
