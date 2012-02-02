@@ -78,11 +78,11 @@ namespace :deploy do
       cd #{PATH} &&
       git pull &&
       bundle install --deployment &&
-      rake db:load_dump RAILS_ENV=production
+      #rake db:load_dump RAILS_ENV=production
       touch #{PATH}/tmp/restart.txt
     }
 
-    sh "rake db:dump && scp #{DB_DUMP} #{USER}@#{HOST}:#{PATH}/#{DB_DUMP}" 
+    #sh "rake db:dump && scp #{DB_DUMP} #{USER}@#{HOST}:#{PATH}/#{DB_DUMP}" 
     sh "git push && ssh -t #{USER}@#{HOST} '#{cmds}'"
   end
 end
