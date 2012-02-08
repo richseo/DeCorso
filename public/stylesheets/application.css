@@ -11,16 +11,25 @@ a, h1, h2, strong { color: #005dad }
 #container {
   margin: 0px auto 0px auto;
   width: 900px;
-  min-height: 1600px;
+  min-height: 1200px;
   background: url(../images/container-bg.png) top center;
   padding: 0px 0px 15px 0px;
 }
+
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
 
 #page, #menu { width: 827px }
 
 #page {
   margin: 0px 40px 15px 40px;
   min-height: 650px;
+  height: 1%;
+  overflow: hidden;
 }
 
 #header {
