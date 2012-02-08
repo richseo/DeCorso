@@ -3,6 +3,7 @@ body {
   margin: 0px;
   background: url(../images/bg.png) top left repeat;
   font-family: 'Poly', serif;
+  overflow-x: hidden;
 }
 
 a, h1, h2, strong { color: #005dad }
