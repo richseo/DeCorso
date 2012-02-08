@@ -11,7 +11,7 @@ a, h1, h2, strong { color: #005dad }
 #container {
   margin: 0px auto 0px auto;
   width: 900px;
-  min-height: 1200px;
+  min-height: 2000px;
   background: url(../images/container-bg.png) top center;
   padding: 0px 0px 15px 0px;
 }
@@ -238,7 +238,7 @@ a, h1, h2, strong { color: #005dad }
 
 #slides ul.pagination {
   margin: 10px auto 0;
-  width: 100px;
+  width: 200px;
 }
 
 #slides ul.pagination li {
