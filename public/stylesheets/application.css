@@ -289,6 +289,7 @@ a, h1, h2, strong { color: #005dad }
 .slides_container div.slide {
   width: 300px;
   height: 333px;
+  background: #000;
   display: block;
 }
 
