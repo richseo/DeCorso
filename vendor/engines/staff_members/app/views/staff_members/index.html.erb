@@ -1,18 +1,32 @@
 <% content_for :body_content_left do %>
+  <div id="staff-types" class="pagination">
+    <% if @administration %>
+      <em class="current">Administration</em>
+    <% else %>
+      <%= link_to 'Administration', :action => 'administration' %>
+    <% end %>
+    <% if @teachers %>
+      <%= link_to 'Teachers', { :action => 'teachers' }, { :class => "current" } %>
+      Grades:
+      <% 1.upto(6) do |grade| %>
+        <% if params[:grade].to_i == grade %>
+          <em class="current"><%= grade %></em>
+        <% else %>
+          <%= link_to grade, "/staff_members/teachers/grade-#{grade}" %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%= link_to 'Teachers', :action => 'teachers' %>
+    <% end %>
+  </div>
   <% if @staff_members.empty? %>
     No staff members where found
   <% else %>
-    <div id="staff-types">
-    <%= link_to 'Administration', :action => 'administration' %> |
-    <%= link_to 'Teachers', :action => 'teachers' %> |
-    Grades:
-    <% 1.upto(6) do |grade| %>
-      <%= link_to grade, "/staff_members/teachers/grade-#{grade}" %>
-    <% end %>
-  </div>
 
+  <div class="page-citation">
     Page <%= params[:page] || 1 %>
     (<%= @staff_members[0].last_name %> to <%= @staff_members.last.last_name %>)
+  </div>
     <%= will_paginate @staff_members %>
   
     <ul id="staff_members">

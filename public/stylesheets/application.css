@@ -310,8 +310,8 @@ a, h1, h2, strong { color: #005dad }
 
 /* Staff Directory Pagination */
 
-div.pagination { margin: 7px }
+div.pagination, div.page-citation { margin: 7px }
 div.pagination a, div.pagination span, div.pagination em { padding: 3px 5px }
-div.pagination em.current { color: white; background: #005dad }
+div.pagination em.current, div.pagination a.current { color: white; background: #005dad }
 div.pagination a { text-decoration: none }
 div.pagination a:hover { background: #005dad; color: white }

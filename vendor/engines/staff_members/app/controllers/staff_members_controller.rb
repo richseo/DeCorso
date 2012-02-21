@@ -18,6 +18,7 @@ class StaffMembersController < ApplicationController
   end
 
   def administration
+    @administration = true
     @staff_members = find_all_administrators 
 
     present(@page)
@@ -25,6 +26,7 @@ class StaffMembersController < ApplicationController
   end
 
   def teachers
+    @teachers = true
     @staff_members = find_all_teachers
 
     if grade = params[:grade]
