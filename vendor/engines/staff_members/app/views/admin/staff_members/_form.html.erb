@@ -28,7 +28,17 @@
           :toggle_image_display => false
         } %>
   </div>
+
+  <div class='field'>
+    <%= f.label :staff_type -%>
+    <%= f.select :staff_type, @staff_types %>
+  </div>
   
+  <div class='field'>
+    <%= f.label :grade -%>
+    <%= f.select :grade, @grades, :include_blank => true %>
+  </div>
+
   <%= render :partial => "/shared/admin/form_actions",
               :locals => {
                 :f => f,

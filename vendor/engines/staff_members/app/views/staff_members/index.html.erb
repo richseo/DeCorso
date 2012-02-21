@@ -1,6 +1,16 @@
 <% content_for :body_content_left do %>
   <% if @staff_members.empty? %>
+    No staff members where found
   <% else %>
+    <div id="staff-types">
+    <%= link_to 'Administration', :action => 'administration' %> |
+    <%= link_to 'Teachers', :action => 'teachers' %> |
+    Grades:
+    <% 1.upto(6) do |grade| %>
+      <%= link_to grade, "/staff_members/teachers/grade-#{grade}" %>
+    <% end %>
+  </div>
+
     Page <%= params[:page] || 1 %>
     (<%= @staff_members[0].last_name %> to <%= @staff_members.last.last_name %>)
     <%= will_paginate @staff_members %>

@@ -197,6 +197,8 @@ ActiveRecord::Schema.define(:version => 20120124054537) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "staff_type", :default => "Administration", :null => false
+    t.integer  "grade"
   end
 
   add_index "staff_members", ["id"], :name => "index_staff_members_on_id"

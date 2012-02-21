@@ -1,11 +1,11 @@
-class CreateStaffMembers < ActiveRecord::Migration
+class AddStaffTypeAndGrade < ActiveRecord::Migration
 
   def self.up
     # :staff_type should be either 'Teacher' or 'Administration'
     # if 'Teacher" a number grade should be specified
     #
-    add_column :staff_members, :staff_type, :string
-    add_column :staff_members, :grade,      :number
+    add_column :staff_members, :staff_type, :string, :default => 'Administration', :null => false
+    add_column :staff_members, :grade,      :integer
   end
 
   def self.down

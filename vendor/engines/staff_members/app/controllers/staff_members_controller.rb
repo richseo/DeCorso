@@ -17,11 +17,39 @@ class StaffMembersController < ApplicationController
     present(@page)
   end
 
+  def administration
+    @staff_members = find_all_administrators 
+
+    present(@page)
+    render :template => 'staff_members/index'
+  end
+
+  def teachers
+    @staff_members = find_all_teachers
+
+    if grade = params[:grade]
+      @staff_members = @staff_members.where(:grade => grade.to_i)
+    end
+
+    present(@page)
+    render :template => 'staff_members/index'
+  end
+
 protected
 
-  def find_all_staff_members
-    page = params[:page] || 1
+  def page
+    params[:page] || 1
+  end
 
+  def find_all_administrators
+    @all ||= find_all_staff_members.where(:staff_type => StaffMember::StaffTypes::ADMINISTRATION)
+  end
+
+  def find_all_teachers
+    find_all_staff_members.where(:staff_type => StaffMember::StaffTypes::TEACHER)
+  end
+
+  def find_all_staff_members
     @staff_members = StaffMember.paginate(:page => page, :per_page => 5).order('last_name ASC')
   end
 
