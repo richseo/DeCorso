@@ -79,20 +79,15 @@ a, h1, h2, strong { color: #005dad }
 /* Menu */
 
 #menu {
-  /*z-index: 999;
-  position: absolute;
-  top: 307px;*/
   width: 851px;
   margin-left: 24px;
   padding-right: 0;
   padding-left: 0;
-  /*padding-top: 100px;*/
   margin-top: 0px;
   margin-bottom: 10px;
 
   font-weight: bold;
-  font-size: 14pt;
-  /*font-family: sans-serif;*/
+  font-size: 12pt;
   border-bottom: solid 1pt #005dad;
 }
 
@@ -106,7 +101,7 @@ a, h1, h2, strong { color: #005dad }
   padding-top: 3px;
   padding-right: 15px;
   padding-left: 15px;
-  /*color: white;*/
+  margin: 0;
   color: #005dad;
 }
 
@@ -118,6 +113,7 @@ a, h1, h2, strong { color: #005dad }
 #menu li, #menu ul {
   padding: 0;
   margin: 0;
+  display: block;
 }
 
 #menu li {
