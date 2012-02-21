@@ -78,6 +78,7 @@ namespace :deploy do
       cd #{PATH} &&
       git pull &&
       bundle install --deployment &&
+      rake db:migrate RAILS_ENV=production
       #rake db:load_dump RAILS_ENV=production
       touch #{PATH}/tmp/restart.txt
     }
