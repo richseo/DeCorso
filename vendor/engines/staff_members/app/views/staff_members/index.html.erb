@@ -8,7 +8,7 @@
     <% if @teachers %>
       <%= link_to 'Teachers', { :action => 'teachers' }, { :class => "current" } %>
       Grades:
-      <% 1.upto(6) do |grade| %>
+      <% @grades.each do |grade| %>
         <% if params[:grade].to_i == grade %>
           <em class="current"><%= grade %></em>
         <% else %>

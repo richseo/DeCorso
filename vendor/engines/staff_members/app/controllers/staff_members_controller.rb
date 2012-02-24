@@ -33,6 +33,8 @@ class StaffMembersController < ApplicationController
       @staff_members = @staff_members.where(:grade => grade.to_i)
     end
 
+    @grades = StaffMember::GRADES
+
     present(@page)
     render :template => 'staff_members/index'
   end
