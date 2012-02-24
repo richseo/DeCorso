@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120124054537) do
+ActiveRecord::Schema.define(:version => 20120224053927) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -198,7 +198,7 @@ ActiveRecord::Schema.define(:version => 20120124054537) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "staff_type", :default => "Administration", :null => false
-    t.integer  "grade"
+    t.string   "grade"
   end
 
   add_index "staff_members", ["id"], :name => "index_staff_members_on_id"
